@@ -784,7 +784,6 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
         </div>
 
         <div id="vg-detail" style="margin-top:6px;padding-top:12px;border-top:1px solid var(--border);min-height:60px;">
-          <div style="font-size:11px;color:var(--fg3);">clique num cliente pra ver os cargos</div>
         </div>
       </div>
     </div>
@@ -991,7 +990,7 @@ function vgReset(){
   document.getElementById('vg-label').textContent='vagas';
   document.querySelectorAll('.vg-seg').forEach(s=>s.style.strokeWidth='20');
   document.querySelectorAll('.vg-legend').forEach(l=>l.style.background='none');
-  document.getElementById('vg-detail').innerHTML='<div style="font-size:11px;color:var(--fg3);">clique num cliente pra ver os cargos</div>';
+  document.getElementById('vg-detail').innerHTML='';
 }
 
 function closeModal(e){
