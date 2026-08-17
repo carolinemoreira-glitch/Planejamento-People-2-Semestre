@@ -269,6 +269,7 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
       <button class="onb-btn" data-i="2" onclick="onbSelect(2)" style="font-family:'Red Hat Display',sans-serif;font-size:14px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:8px 17px;cursor:pointer;">45 dias</button>
       <button class="onb-btn" data-i="3" onclick="onbSelect(3)" style="font-family:'Red Hat Display',sans-serif;font-size:14px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:8px 17px;cursor:pointer;">3 meses</button>
       <button class="onb-btn" data-i="4" onclick="onbSelect(4)" style="font-family:'Red Hat Display',sans-serif;font-size:14px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:8px 17px;cursor:pointer;">6 meses</button>
+      <button class="onb-btn" data-i="5" onclick="onbSelect(5)" style="font-family:'Red Hat Display',sans-serif;font-size:14px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:8px 17px;cursor:pointer;">Compliance</button>
     </div>
 
     <div class="r d4" id="onb-detail" style="max-height:0;overflow:hidden;transition:max-height .2s ease;background:rgba(208,9,95,.06);border:1px solid rgba(208,9,95,.18);border-radius:12px;font-size:15px;color:var(--fg2);line-height:1.6;">
@@ -457,72 +458,92 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
 
         <div class="cc-item" data-i="0" onclick="ccItemToggle(0)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">One Voice</div>
-            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">a cada 3 semanas</span>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Heartbeat</div>
+            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">a cada 15 dias</span>
           </div>
           <div id="cc-desc-0" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Contato direto com o que evolui no Distrito, conectando tendências, prática e direção de forma objetiva.</div>
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Pulso rápido e recorrente de conexão entre os times.</div>
           </div>
         </div>
 
         <div class="cc-item" data-i="1" onclick="ccItemToggle(1)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">People News</div>
-            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x ao mês</span>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">One Voice</div>
+            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">a cada 3 semanas</span>
           </div>
           <div id="cc-desc-1" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">A newsletter para deixar os Distriters por dentro de tudo o que está rolando no Distrito.</div>
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Contato direto com o que evolui no Distrito, conectando tendências, prática e direção de forma objetiva.</div>
           </div>
         </div>
 
         <div class="cc-item" data-i="2" onclick="ccItemToggle(2)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Gestão News</div>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">People News</div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x ao mês</span>
           </div>
           <div id="cc-desc-2" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Atualizações, novidades e processos que impactam diretamente a rotina e a atuação das lideranças do Distrito.</div>
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">A newsletter para deixar os Distriters por dentro de tudo o que está rolando no Distrito.</div>
           </div>
         </div>
 
         <div class="cc-item" data-i="3" onclick="ccItemToggle(3)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Conecta</div>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Gestão News</div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x ao mês</span>
           </div>
           <div id="cc-desc-3" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Evento onde compartilhamos novidades e informações importantes da empresa.</div>
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Atualizações, novidades e processos que impactam diretamente a rotina e a atuação das lideranças do Distrito.</div>
           </div>
         </div>
 
         <div class="cc-item" data-i="4" onclick="ccItemToggle(4)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Café com Founders</div>
-            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Radar da Liderança</div>
+            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x ao mês</span>
           </div>
           <div id="cc-desc-4" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Espaço de conexão direta com os C-levels.</div>
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Momento mensal de conexão, troca e desenvolvimento entre as lideranças.</div>
           </div>
         </div>
 
         <div class="cc-item" data-i="5" onclick="ccItemToggle(5)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Conecta</div>
+            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x ao mês</span>
+          </div>
+          <div id="cc-desc-5" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Evento onde compartilhamos novidades e informações importantes da empresa.</div>
+          </div>
+        </div>
+
+        <div class="cc-item" data-i="6" onclick="ccItemToggle(6)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Café com Founders</div>
+            <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
+          </div>
+          <div id="cc-desc-6" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
+            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Espaço de conexão direta com os C-levels.</div>
+          </div>
+        </div>
+
+        <div class="cc-item" data-i="7" onclick="ccItemToggle(7)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:14px;font-weight:700;color:var(--fg1);">Conference + Festa</div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
           </div>
-          <div id="cc-desc-5" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
+          <div id="cc-desc-7" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
             <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Apresentar a consolidação dos resultados e reconhecer pessoas e projetos.</div>
           </div>
         </div>
 
-        <div class="cc-item" data-i="6" onclick="openModal('modal-clima')" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
+        <div class="cc-item" data-i="8" onclick="openModal('modal-clima')" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:14px;font-weight:700;color:var(--fg1);display:flex;align-items:center;gap:7px;">Pesquisa de Clima <span style="color:var(--fg3);font-size:12px;">↗</span></div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
           </div>
         </div>
 
-        <div class="cc-item" data-i="7" onclick="openModal('modal-avaliacao')" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
+        <div class="cc-item" data-i="9" onclick="openModal('modal-avaliacao')" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:14px;font-weight:700;color:var(--fg1);display:flex;align-items:center;gap:7px;">Avaliação de Desempenho <span style="color:var(--fg3);font-size:12px;">↗</span></div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
@@ -553,48 +574,22 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
 
     <div class="r d2" style="font-size:34px;font-weight:700;color:var(--fg1);line-height:1.15;margin-bottom:16px;">Governança de Acessos & Plataformas</div>
 
-    <div class="r d3" style="font-size:20px;color:var(--fg2);line-height:1.6;">Estruturar o fluxo de acessos, garantir a conclusão dos treinamentos de Compliance e manter as plataformas sob controle.</div>
+    <div class="r d3" style="font-size:20px;color:var(--fg2);line-height:1.6;margin-bottom:30px;">Estruturar o fluxo de acessos e manter as plataformas sob controle.</div>
 
-    <div id="ga-panel" style="max-height:0;overflow:hidden;transition:max-height .3s ease;">
-      <div style="padding-top:24px;display:flex;flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:10px;">
+    <div class="r d4" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
 
-        <div class="ga-item" data-i="0" onclick="gaItemToggle(0)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;cursor:pointer;">
-          <div style="font-size:16px;font-weight:700;color:var(--fg1);white-space:nowrap;">Governança de Acessos</div>
-          <div id="ga-desc-0" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13.5px;color:var(--fg3);line-height:1.5;padding-top:7px;max-width:320px;white-space:normal;">Fluxo de solicitação, aprovação, concessão, revisão e revogação, com foco no Google Workspace.</div>
-          </div>
-        </div>
-
-        <div class="ga-item" data-i="1" onclick="gaItemToggle(1)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;cursor:pointer;">
-          <div style="font-size:16px;font-weight:700;color:var(--fg1);white-space:nowrap;">Compliance</div>
-          <div id="ga-desc-1" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13.5px;color:var(--fg3);line-height:1.5;padding-top:7px;max-width:300px;white-space:normal;">Treinamentos obrigatórios com controle de conclusão e identificação de pendências.</div>
-          </div>
-        </div>
-
-        <div class="ga-item" data-i="2" onclick="gaItemToggle(2)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;cursor:pointer;">
-          <div style="font-size:16px;font-weight:700;color:var(--fg1);white-space:nowrap;">Plataformas</div>
-          <div id="ga-desc-2" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13.5px;color:var(--fg3);line-height:1.5;padding-top:7px;max-width:300px;white-space:normal;">Distrito World atualizado e plataformas da empresa sob gestão adequada.</div>
-          </div>
-        </div>
-
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;">
+        <div style="font-size:20px;font-weight:700;color:var(--fg1);margin-bottom:10px;">Governança de Acessos</div>
+        <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;">Fluxo de solicitação, aprovação, concessão, revisão e revogação, com foco no Google Workspace.</p>
       </div>
 
-      <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin:20px 0 8px;">Indicadores</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;">
-        <span style="font-size:13px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:6px 14px;">% de acessos revisados</span>
-        <span style="font-size:13px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:6px 14px;">% revogados no prazo</span>
-        <span style="font-size:13px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:6px 14px;">% treinamentos concluídos</span>
-        <span style="font-size:13px;color:var(--fg2);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:6px 14px;">Nº de pendências</span>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;">
+        <div style="font-size:20px;font-weight:700;color:var(--fg1);margin-bottom:10px;">Plataformas</div>
+        <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;">Distrito World atualizado e plataformas da empresa sob gestão adequada.</p>
       </div>
+
     </div>
 
-    <div style="display:flex;justify-content:center;margin-top:24px;">
-      <button id="ga-toggle-btn" type="button" aria-label="Ver frentes de governança" style="background:none;border:none;color:var(--fg2);opacity:.9;font-size:24px;cursor:pointer;padding:12px 24px;line-height:1;">
-        <span id="ga-toggle-icon" style="display:inline-block;transition:transform .2s;">▾</span>
-      </button>
-    </div>
 
    </div>
   </div>
@@ -861,7 +856,8 @@ const onbTextos = [
   "Pesquisa de 15 dias: para avaliarmos como tem sido sua adaptação inicial.",
   "Pesquisa de 45 dias: acompanhada de uma conversa com sua liderança e o time de People.",
   "Pesquisa de 3 meses: bate-papo com sua liderança e People.",
-  "Pesquisa de 6 meses: para concluirmos a jornada de integração e avaliarmos sua experiência como um todo."
+  "Pesquisa de 6 meses: para concluirmos a jornada de integração e avaliarmos sua experiência como um todo.",
+  "Treinamentos obrigatórios de Compliance concluídos durante a integração, com controle de conclusão e prazo."
 ];
 function onbSelect(i){
   document.querySelectorAll('.onb-btn').forEach(b=>{
@@ -898,7 +894,7 @@ if (ccToggleBtn) {
   let ccOpen = false;
   ccToggleBtn.addEventListener('click', () => {
     ccOpen = !ccOpen;
-    ccPanel.style.maxHeight = ccOpen ? '900px' : '0';
+    ccPanel.style.maxHeight = ccOpen ? '1100px' : '0';
     ccIcon.style.transform = ccOpen ? 'rotate(180deg)' : 'rotate(0deg)';
   });
 }
@@ -925,24 +921,6 @@ const dvItemState = {};
 function dvItemToggle(i){
   dvItemState[i] = !dvItemState[i];
   document.getElementById('dv-desc-'+i).style.maxHeight = dvItemState[i] ? '60px' : '0';
-}
-
-const gaToggleBtn = document.getElementById('ga-toggle-btn');
-if (gaToggleBtn) {
-  const gaPanel = document.getElementById('ga-panel');
-  const gaIcon = document.getElementById('ga-toggle-icon');
-  let gaOpen = false;
-  gaToggleBtn.addEventListener('click', () => {
-    gaOpen = !gaOpen;
-    gaPanel.style.maxHeight = gaOpen ? '300px' : '0';
-    gaIcon.style.transform = gaOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-  });
-}
-
-const gaItemState = {};
-function gaItemToggle(i){
-  gaItemState[i] = !gaItemState[i];
-  document.getElementById('ga-desc-'+i).style.maxHeight = gaItemState[i] ? '60px' : '0';
 }
 
 function openModal(id){
