@@ -526,13 +526,10 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
           </div>
         </div>
 
-        <div class="cc-item" data-i="7" onclick="ccItemToggle(7)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
+        <div class="cc-item" data-i="7" onclick="openModal('modal-conference')" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;cursor:pointer;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:14px;font-weight:700;color:var(--fg1);">Conference + Festa</div>
+            <div style="font-size:14px;font-weight:700;color:var(--fg1);display:flex;align-items:center;gap:7px;">Conference + Festa <span style="color:var(--fg3);font-size:12px;">↗</span></div>
             <span style="font-size:11.5px;font-weight:600;color:var(--brand);background:rgba(208,9,95,.1);border:1px solid rgba(208,9,95,.25);padding:4px 11px;border-radius:12px;white-space:nowrap;">1x por semestre</span>
-          </div>
-          <div id="cc-desc-7" style="max-height:0;overflow:hidden;transition:max-height .2s ease;">
-            <div style="font-size:13px;color:var(--fg3);line-height:1.5;padding-top:8px;">Apresentar a consolidação dos resultados e reconhecer pessoas e projetos.</div>
           </div>
         </div>
 
@@ -578,14 +575,18 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
 
     <div class="r d4" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;">
-        <div style="font-size:20px;font-weight:700;color:var(--fg1);margin-bottom:10px;">Governança de Acessos</div>
-        <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;">Fluxo de solicitação, aprovação, concessão, revisão e revogação, com foco no Google Workspace.</p>
+      <div onclick="gaItemToggle(0)" style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;cursor:pointer;">
+        <div style="font-size:20px;font-weight:700;color:var(--fg1);">Governança de Acessos</div>
+        <div id="ga-desc-0" style="max-height:0;overflow:hidden;transition:max-height .25s ease;">
+          <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;padding-top:10px;">Fluxo de solicitação, aprovação, concessão, revisão e revogação, com foco no Google Workspace.</p>
+        </div>
       </div>
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;">
-        <div style="font-size:20px;font-weight:700;color:var(--fg1);margin-bottom:10px;">Plataformas</div>
-        <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;">Distrito World atualizado e plataformas da empresa sob gestão adequada.</p>
+      <div onclick="gaItemToggle(1)" style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;cursor:pointer;">
+        <div style="font-size:20px;font-weight:700;color:var(--fg1);">Plataformas</div>
+        <div id="ga-desc-1" style="max-height:0;overflow:hidden;transition:max-height .25s ease;">
+          <p style="font-size:15px;color:var(--fg3);line-height:1.6;margin:0;padding-top:10px;">Distrito World atualizado e plataformas da empresa sob gestão adequada.</p>
+        </div>
       </div>
 
     </div>
@@ -660,31 +661,26 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
 
     <div class="r d2" style="font-size:34px;font-weight:700;color:var(--fg1);line-height:1.15;margin-bottom:30px;">O que <em style="font-style:normal;color:var(--brand);">vamos</em> entregar</div>
 
-    <div class="r d3" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:14px;">
+    <div class="r d3" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;">
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;">
-        <div class="countup" data-target="20" data-prefix="≤ " data-suffix=" dias" style="font-size:28px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
-        <div style="font-size:13px;color:var(--fg3);line-height:1.4;">SLA de contratação</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px 18px;">
+        <div class="countup" data-target="20" data-prefix="≤ " data-suffix=" dias" style="font-size:30px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
+        <div style="font-size:13.5px;color:var(--fg3);line-height:1.4;">SLA de contratação</div>
       </div>
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;">
-        <div class="countup" data-target="4.5" style="font-size:28px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
-        <div style="font-size:13px;color:var(--fg3);line-height:1.4;">Nota Glassdoor (atual 3,8)</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px 18px;">
+        <div class="countup" data-target="4.5" style="font-size:30px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
+        <div style="font-size:13.5px;color:var(--fg3);line-height:1.4;">Nota Glassdoor (atual 3,8)</div>
       </div>
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;">
-        <div class="countup" data-target="70" style="font-size:28px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
-        <div style="font-size:13px;color:var(--fg3);line-height:1.4;">eNPS (atual 68)</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px 18px;">
+        <div class="countup" data-target="70" style="font-size:30px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
+        <div style="font-size:13.5px;color:var(--fg3);line-height:1.4;">eNPS (atual 68)</div>
       </div>
 
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;">
-        <div class="countup" data-target="100" data-suffix="%" style="font-size:28px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
-        <div style="font-size:13px;color:var(--fg3);line-height:1.4;">Conclusão de Futuros Líderes</div>
-      </div>
-
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;">
-        <div class="countup" data-target="100" data-suffix="%" style="font-size:28px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
-        <div style="font-size:13px;color:var(--fg3);line-height:1.4;">Conclusão de treinamentos de Compliance</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px 18px;">
+        <div class="countup" data-target="100" data-suffix="%" style="font-size:30px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">0</div>
+        <div style="font-size:13.5px;color:var(--fg3);line-height:1.4;">Conclusão de Futuros Líderes</div>
       </div>
 
     </div>
@@ -732,6 +728,21 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--fg1);overflow
     <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:16px;">Avaliação de Desempenho</div>
     <div style="font-size:44px;font-weight:700;color:var(--brand);line-height:1;margin-bottom:8px;">Jan/2027</div>
     <div style="font-size:14px;color:var(--fg3);margin-bottom:20px;">início do novo ciclo</div>
+  </div>
+
+  <div id="modal-conference" class="modal-card" style="display:none;background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:36px 40px;max-width:600px;width:90%;position:relative;">
+    <button onclick="closeModal(event)" style="position:absolute;top:16px;right:16px;background:none;border:none;color:var(--fg3);font-size:22px;cursor:pointer;line-height:1;padding:6px;">✕</button>
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:22px;">Conference + Festa da Firma</div>
+    <div style="display:flex;gap:16px;">
+      <div style="background:rgba(208,9,95,.08);border:1px solid rgba(208,9,95,.22);border-radius:12px;padding:16px 20px;flex:1;">
+        <div style="font-size:30px;font-weight:700;color:var(--brand);line-height:1;">11/12</div>
+        <div style="font-size:11.5px;color:var(--fg3);margin-top:6px;">data confirmada</div>
+      </div>
+      <div style="background:none;border:1.5px dashed var(--border2);border-radius:12px;padding:16px 20px;flex:1;">
+        <div style="font-size:30px;font-weight:700;color:var(--fg1);line-height:1;">R$ 20K</div>
+        <div style="font-size:11.5px;color:#e8b339;margin-top:6px;">budget em confirmação</div>
+      </div>
+    </div>
   </div>
 
   <div id="modal-vagas" class="modal-card" style="display:none;background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:36px 40px;max-width:600px;width:90%;position:relative;">
@@ -926,6 +937,12 @@ const dvItemState = {};
 function dvItemToggle(i){
   dvItemState[i] = !dvItemState[i];
   document.getElementById('dv-desc-'+i).style.maxHeight = dvItemState[i] ? '60px' : '0';
+}
+
+const gaItemState = {};
+function gaItemToggle(i){
+  gaItemState[i] = !gaItemState[i];
+  document.getElementById('ga-desc-'+i).style.maxHeight = gaItemState[i] ? '100px' : '0';
 }
 
 function openModal(id){
